@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English in Action</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            height: 100vh;
+            background-image: url('imgprincipal.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 10%;
+        }
+        .hero-text {
+            color: white;
+            max-width: 600px;
+        }
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero-text p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .cta-button {
+            background-color: white;
+            color: #181F54;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #f0f0f0;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .card .card-button {
+            background-color: #181F54;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .card .card-button:hover {
+            background-color: #29337d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção Principal -->
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>English In Action</h1>
+            <p>Somos fruto do Projeto Integrador do Técnico em Informática, do IFRS Campus Ibirubá, e temos como objetivo disponibilizar um curso gratuito e uma escape room para treinar seu inglês!</p>
+            <a href="#cards" class="cta-button">Veja Agora!</a>
+        </div>
+    </div>
+
+    <!-- Seção dos Cards -->
+    <div id="cards" class="card-container">
+        <div class="card">
+            <img src="instagram.png" alt="Instagram Icon">
+            <h3>Instagram</h3>
+            <p>Nos acompanhe no Instagram!</p>
+            <a href="https://www.instagram.com/english_action_/?igsh=OGs3eDV1cGp6N2wz&utm_source=qr" class="card-button">Ir Para Instagram</a>
+        </div>
+        <div class="card">
+            <img src="curso.png" alt="Curso Icon">
+            <h3>English Essentials</h3>
+            <p>Experimente nosso curso gratuito!</p>
+            <a href="menucurso.html" class="card-button">Ir Para Curso</a>
+        </div>
+        <div class="card">
+            <img src="escape.png" alt="Escape Room Icon">
+            <h3>Escape Room</h3>
+            <p>Jogue agora e teste seu inglês!</p>
+            <a href="escaperooms.html" class="card-button">Ir Para Escape Room</a>
+        </div>
+    </div>
+
+    <!-- JavaScript para a rolagem suave -->
+    <script>
+        document.querySelector('.cta-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#cards').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+
+</body>
+</html>

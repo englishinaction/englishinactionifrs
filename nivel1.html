@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Curso - Nível 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        /* Gradiente e título */
+        header {
+            background: linear-gradient(to right, #1b1b6d, #8b0000);
+            padding: 15px; /* Ajusta o padding do header */
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2rem; /* Ajusta o tamanho da fonte do título */
+            letter-spacing: 1px;
+        }
+
+        /* Grade de conteúdo */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Cartões de conteúdo */
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px; /* Mantém o padding dos cartões */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h2 {
+            color: #1b1b6d;
+            font-size: 1.8rem; /* Ajusta o tamanho da fonte do título do cartão */
+            margin-bottom: 20px;
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 10px;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.2rem; /* Mantém o tamanho da fonte do parágrafo */
+            margin-bottom: 15px;
+        }
+
+        /* Estilo dos botões */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+        .button {
+            background-color: #1b1b6d;
+            color: white;
+            border: none;
+            padding: 12px 20px; /* Mantém o padding dos botões */
+            border-radius: 5px;
+            font-size: 1.2rem; /* Mantém o tamanho da fonte dos botões */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #2a2a8c;
+        }
+        .button.red {
+            background-color: #8b0000;
+        }
+        .button.red:hover {
+            background-color: #a00000;
+        }
+
+        /* Estilo para a imagem */
+        .image {
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            height: 100%; /* Ajusta a altura da imagem para preencher o cartão */
+            max-height: 300px; /* Mantém a altura máxima para a imagem */
+            overflow: hidden; /* Oculta qualquer parte da imagem que exceda o container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image img {
+            width: 100%; /* Ajusta a largura da imagem para preencher o container */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .button-group a {
+            text-decoration: none; /* Remove o sublinhado */
+            background-color: #1b1b6d; /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            padding: 12px 20px; /* Mantém o padding dos botões */
+            border-radius: 5px; /* Arredonda as bordas */
+            font-size: 1.2rem; /* Mantém o tamanho da fonte dos botões */
+            display: inline-block;
+            margin-right: 10px; /* Espaçamento entre os botões */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Efeito de hover nos links */
+        .button-group a:hover {
+            background-color: #003399; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Título do nível -->
+    <header>
+        <h1>Nível 1: Introdução ao Inglês</h1>
+    </header>
+
+    <!-- Conteúdo do curso -->
+    <div class="grid">
+        <!-- Cartão de Slides -->
+        <div class="card">
+            <h2>Slides</h2>
+            <p>Revise os slides deste nível e aprenda os conceitos principais.</p>
+            <div class="button-group">
+                <!-- Use <a> com href para abrir os arquivos PDF -->
+                <a class="button" href="curso1.pdf">Alfabeto</a>
+                <a class="button" href="CURSO 1- NUMEROS.pdf">Números</a>
+            </div>
+        </div>
+
+        <!-- Cartão de Atividades -->
+        <div class="card">
+            <h2>Atividades</h2>
+            <p>Realize as atividades para praticar o que foi ensinado.</p>
+            <div class="button-group">
+                <a href="teste1.html" class="button red">Iniciar Atividades</a>
+            </div>
+        </div>
+        
+        <!-- Cartão de Vídeos -->
+        <div class="card">
+            <h2>Vídeos</h2>
+            <p>Assista aos vídeos para complementar seu aprendizado.</p>
+            <div class="button-group">
+                <a href="teste1.html" class="button">Assistir Vídeos</a>
+            </div>
+        </div>
+
+        <!-- Espaço para Imagem -->
+        <div class="image">
+            <img src="h.jpg" alt="Descrição da Imagem">
+        </div>
+    </div>
+</body>
+</html>

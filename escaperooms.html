@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Rooms</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .header a {
+            text-decoration: none;
+            color: #181F54;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .header a:hover {
+            color: #29337d;
+        }
+        .header a img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #941b1b;
+            margin-bottom: 40px;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+        .card {
+            width: 250px;
+            background: #fff;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            width: 100%;
+            height: 150px; /* Altura da imagem */
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #181F54;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .card .card-button {
+            background-color: #181F54;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            align-self: center;
+        }
+        .card .card-button:hover {
+            background-color: #29337d;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .card-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 900px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Link Voltar -->
+    <div class="header">
+        <a href="pagprincipal.html">
+            <img src="seta.png" alt="Seta para Esquerda">
+            Voltar
+        </a>
+    </div>
+
+    <!-- Título -->
+    <h2>Escape Rooms</h2>
+
+    <!-- Container dos Cards -->
+    <div class="card-container">
+        <div class="card" data-number="01">
+            <img src="vc.png" alt="Vintage Circus">
+            <div class="card-content">
+                <h3>Vintage Circus</h3>
+                <p>Quais segredos esse circo guarda?</p>
+                <a href="https://view.genially.com/667af5212de4aa00148af7e0/interactive-content-escape-room-projeto-integrador" class="card-button">Jogar</a>
+            </div>
+        </div>
+        <div class="card" data-number="02">
+            <img src="molt.png" alt="Mystery Of Lost Time">
+            <div class="card-content">
+                <h3>Mystery Of Lost Time</h3>
+                <p>Descubra o mistério!</p>
+                <a href="https://view.genially.com/660c40e4cbf0f70014d280ef/interactive-content-mystery-of-lost-time" class="card-button">Jogar</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
