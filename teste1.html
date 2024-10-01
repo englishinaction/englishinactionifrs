@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Interativo</title>
+    <title>Quiz Básico</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -118,6 +118,28 @@
             color: #333333;
             margin: 10px 0;
         }
+
+        .options input[disabled] {
+            cursor: not-allowed;
+        }
+
+        .back-btn {
+            background-color: #cccccc;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #aaaaaa;
+        }
     </style>
 </head>
 <body>
@@ -125,202 +147,193 @@
         <h1>Quiz Interativo</h1>
         <form id="quiz-form">
             <!-- Pergunta 1 -->
-            <div class="question" data-correct="a">
-                <h2>1. Qual é a capital da França?</h2>
+            <div class="question" data-correct="b">
+                <h2>1. Qual das seguintes palavras é uma saudação em inglês?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q1" value="a"> Paris</li>
-                    <li><input type="radio" name="q1" value="b"> Londres</li>
-                    <li><input type="radio" name="q1" value="c"> Roma</li>
-                    <li><input type="radio" name="q1" value="d"> Berlim</li>
+                    <li><input type="radio" name="q1" value="a"> Goodbye</li>
+                    <li><input type="radio" name="q1" value="b"> Hello</li>
+                    <li><input type="radio" name="q1" value="c"> Night</li>
+                    <li><input type="radio" name="q1" value="d"> See you</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Paris</div>
+                <div class="correct-answer">Resposta correta: Hello</div>
             </div>
 
             <!-- Pergunta 2 -->
             <div class="question" data-correct="c">
-                <h2>2. Qual é o maior planeta do sistema solar?</h2>
+                <h2>2. Se hoje é dia "twenty-fourth" em inglês, qual é o número correspondente?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q2" value="a"> Terra</li>
-                    <li><input type="radio" name="q2" value="b"> Marte</li>
-                    <li><input type="radio" name="q2" value="c"> Júpiter</li>
-                    <li><input type="radio" name="q2" value="d"> Saturno</li>
+                    <li><input type="radio" name="q2" value="a"> 14</li>
+                    <li><input type="radio" name="q2" value="b"> 20</li>
+                    <li><input type="radio" name="q2" value="c"> 24</li>
+                    <li><input type="radio" name="q2" value="d"> 21</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Júpiter</div>
+                <div class="correct-answer">Resposta correta: 24</div>
             </div>
 
             <!-- Pergunta 3 -->
-            <div class="question" data-correct="a">
-                <h2>3. Qual é a fórmula química da água?</h2>
+            <div class="question" data-correct="b">
+                <h2>3. Qual é o mês do ano que tem 28 ou 29 dias, dependendo do ano, em inglês?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q3" value="a"> H₂O</li>
-                    <li><input type="radio" name="q3" value="b"> CO₂</li>
-                    <li><input type="radio" name="q3" value="c"> O₂</li>
-                    <li><input type="radio" name="q3" value="d"> H₂O₂</li>
+                    <li><input type="radio" name="q3" value="a"> January</li>
+                    <li><input type="radio" name="q3" value="b"> February</li>
+                    <li><input type="radio" name="q3" value="c"> April</li>
+                    <li><input type="radio" name="q3" value="d"> October</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: H₂O</div>
+                <div class="correct-answer">Resposta correta: February</div>
             </div>
 
             <!-- Pergunta 4 -->
             <div class="question" data-correct="a">
-                <h2>4. Quem escreveu 'Dom Casmurro'?</h2>
+                <h2>4. Qual dessas palavras se refere a um item de vestuário que normalmente se usa nos pés, em inglês?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q4" value="a"> Machado de Assis</li>
-                    <li><input type="radio" name="q4" value="b"> José de Alencar</li>
-                    <li><input type="radio" name="q4" value="c"> Jorge Amado</li>
-                    <li><input type="radio" name="q4" value="d"> Clarice Lispector</li>
+                    <li><input type="radio" name="q4" value="a"> Shoes</li>
+                    <li><input type="radio" name="q4" value="b"> Gloves</li>
+                    <li><input type="radio" name="q4" value="c"> Hat</li>
+                    <li><input type="radio" name="q4" value="d"> Scarf</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Machado de Assis</div>
+                <div class="correct-answer">Resposta correta: Shoes</div>
             </div>
 
             <!-- Pergunta 5 -->
-            <div class="question" data-correct="a">
-                <h2>5. Qual é a capital do Brasil?</h2>
+            <div class="question" data-correct="d">
+                <h2>5. Se alguém lhe disser que algo custa "fifteen dollars", qual o valor correto?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q5" value="a"> Brasília</li>
-                    <li><input type="radio" name="q5" value="b"> São Paulo</li>
-                    <li><input type="radio" name="q5" value="c"> Rio de Janeiro</li>
-                    <li><input type="radio" name="q5" value="d"> Salvador</li>
+                    <li><input type="radio" name="q5" value="a"> 5 dólares</li>
+                    <li><input type="radio" name="q5" value="b"> 10 dólares</li>
+                    <li><input type="radio" name="q5" value="c"> 50 dólares</li>
+                    <li><input type="radio" name="q5" value="d"> 15 dólares</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Brasília</div>
+                <div class="correct-answer">Resposta correta: 15 dólares</div>
             </div>
 
             <!-- Pergunta 6 -->
-            <div class="question" data-correct="d">
-                <h2>6. Qual é o menor continente?</h2>
+            <div class="question" data-correct="b">
+                <h2>6. Qual das frases a seguir está correta em inglês para dizer que hoje é sexta-feira?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q6" value="a"> Ásia</li>
-                    <li><input type="radio" name="q6" value="b"> Europa</li>
-                    <li><input type="radio" name="q6" value="c"> América do Norte</li>
-                    <li><input type="radio" name="q6" value="d"> Austrália</li>
+                    <li><input type="radio" name="q6" value="a"> Tomorrow is Monday</li>
+                    <li><input type="radio" name="q6" value="b"> Today is Friday</li>
+                    <li><input type="radio" name="q6" value="c"> Today is Thursday</li>
+                    <li><input type="radio" name="q6" value="d"> Today is Monday</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Austrália</div>
+                <div class="correct-answer">Resposta correta: Today is Friday</div>
             </div>
 
             <!-- Pergunta 7 -->
-            <div class="question" data-correct="a">
-                <h2>7. Qual é o elemento químico com símbolo Au?</h2>
+            <div class="question" data-correct="c">
+                <h2>7. Se você combinar red com yellow, qual cor será criada?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q7" value="a"> Ouro</li>
-                    <li><input type="radio" name="q7" value="b"> Prata</li>
-                    <li><input type="radio" name="q7" value="c"> Cobre</li>
-                    <li><input type="radio" name="q7" value="d"> Ferro</li>
+                    <li><input type="radio" name="q7" value="a"> green</li>
+                    <li><input type="radio" name="q7" value="b"> pink</li>
+                    <li><input type="radio" name="q7" value="c"> orange</li>
+                    <li><input type="radio" name="q7" value="d"> blue</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Ouro</div>
+                <div class="correct-answer">Resposta correta: orange</div>
             </div>
 
             <!-- Pergunta 8 -->
-            <div class="question" data-correct="a">
-                <h2>8. Quem pintou a Mona Lisa?</h2>
+            <div class="question" data-correct="d">
+                <h2>8. Qual é a saudação correta para usar ao cumprimentar alguém à noite em inglês?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q8" value="a"> Leonardo da Vinci</li>
-                    <li><input type="radio" name="q8" value="b"> Michelangelo</li>
-                    <li><input type="radio" name="q8" value="c"> Raphael</li>
-                    <li><input type="radio" name="q8" value="d"> Van Gogh</li>
+                    <li><input type="radio" name="q8" value="a"> Good afternoon</li>
+                    <li><input type="radio" name="q8" value="b"> Good night</li>
+                    <li><input type="radio" name="q8" value="c"> Good morning</li>
+                    <li><input type="radio" name="q8" value="d"> Good evening</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Leonardo da Vinci</div>
+                <div class="correct-answer">Resposta correta: Good evening</div>
             </div>
 
             <!-- Pergunta 9 -->
             <div class="question" data-correct="a">
-                <h2>9. Qual é a fórmula química do sal de cozinha?</h2>
+                <h2>9. Como responder à pergunta "Where are you from?" se você é do Brasil?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q9" value="a"> NaCl</li>
-                    <li><input type="radio" name="q9" value="b"> KCl</li>
-                    <li><input type="radio" name="q9" value="c"> NaOH</li>
-                    <li><input type="radio" name="q9" value="d"> HCl</li>
+                    <li><input type="radio" name="q9" value="a"> I’m from Brazil</li>
+                    <li><input type="radio" name="q9" value="b"> I’m live in Brazil</li>
+                    <li><input type="radio" name="q9" value="c"> I’m Brazil</li>
+                    <li><input type="radio" name="q9" value="d"> I’m to Brazil</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: NaCl</div>
+                <div class="correct-answer">Resposta correta: I’m from Brazil</div>
             </div>
 
             <!-- Pergunta 10 -->
-            <div class="question" data-correct="a">
-                <h2>10. Quem foi o explorador que circunavegou o globo terrestre?</h2>
+            <div class="question" data-correct="b">
+                <h2>10. Qual das seguintes expressões é usada para se despedir em inglês?</h2>
                 <ul class="options">
-                    <li><input type="radio" name="q10" value="a"> Fernão de Magalhães</li>
-                    <li><input type="radio" name="q10" value="b"> Cristóvão Colombo</li>
-                    <li><input type="radio" name="q10" value="c"> Vasco da Gama</li>
-                    <li><input type="radio" name="q10" value="d"> Pedro Álvares Cabral</li>
+                    <li><input type="radio" name="q10" value="a"> Hi</li>
+                    <li><input type="radio" name="q10" value="b"> See you later</li>
+                    <li><input type="radio" name="q10" value="c"> Nice to meet you</li>
+                    <li><input type="radio" name="q10" value="d"> How are you?</li>
                 </ul>
-                <div class="correct-answer">Resposta correta: Fernão de Magalhães</div>
+                <div class="correct-answer">Resposta correta: See you later</div>
             </div>
 
-            <button type="button" class="submit-btn" onclick="submitQuiz()">Submeter Respostas</button>
+            <button type="button" class="submit-btn" onclick="checkAnswers()">Enviar Respostas</button>
         </form>
-
-        <!-- Seção de Resultados -->
-        <div class="results" id="results">
-            <h2>Resultados do Quiz</h2>
-            <p id="score"></p>
-            <p id="percentage"></p>
+        <div class="results">
+            <h2>Resultado do Quiz</h2>
+            <p id="correct-count"></p>
+            <p id="incorrect-count"></p>
+            <button class="back-btn" onclick="window.location.href='nivel1.html'">Voltar</button>
         </div>
     </div>
 
     <script>
-        // Respostas corretas (chave: pergunta, valor: alternativa correta)
-        const correctAnswers = {
-            q1: 'a',
-            q2: 'c',
-            q3: 'a',
-            q4: 'a',
-            q5: 'a',
-            q6: 'd',
-            q7: 'a',
-            q8: 'a',
-            q9: 'a',
-            q10: 'a'
-        };
+        function checkAnswers() {
+            const questions = document.querySelectorAll('.question');
+            let correct = 0;
+            let incorrect = 0;
+            let allAnswered = true;
 
-        function submitQuiz() {
-    let score = 0;
-    const totalQuestions = 10; // Total de perguntas no quiz
-    const resultsContainer = document.getElementById('results');
-    const scoreElement = document.getElementById('score');
-    const percentageElement = document.getElementById('percentage');
+            questions.forEach(question => {
+                const correctAnswer = question.getAttribute('data-correct');
+                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                
+                // Remover mensagens e cores de validação antes da nova verificação
+                question.querySelectorAll('.options li').forEach(li => li.classList.remove('correct', 'incorrect'));
+                question.querySelector('.correct-answer').style.display = 'none';
+                
+                if (selectedOption) {
+                    const answerValue = selectedOption.value;
+                    if (answerValue === correctAnswer) {
+                        correct++;
+                    } else {
+                        incorrect++;
+                    }
+                } else {
+                    allAnswered = false;
+                }
+            });
 
-    // Limpa os estilos anteriores
-    document.querySelectorAll('.options li').forEach(li => {
-        li.classList.remove('correct', 'incorrect');
-    });
-
-    // Limpa as respostas corretas visíveis
-    document.querySelectorAll('.correct-answer').forEach(div => {
-        div.style.display = 'none';
-    });
-
-    // Verifica as respostas
-    for (let i = 1; i <= totalQuestions; i++) {
-        const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
-        const correctOption = correctAnswers[`q${i}`];
-        const questionElement = document.querySelector(`.question[data-correct="${correctOption}"]`);
-        const correctAnswerDiv = questionElement.querySelector('.correct-answer');
-
-        if (selectedOption) {
-            if (selectedOption.value === correctOption) {
-                // Resposta correta
-                score++;
-                selectedOption.parentElement.classList.add('correct');
-            } else {
-                // Resposta incorreta
-                selectedOption.parentElement.classList.add('incorrect');
-                // Exibe a resposta correta
-                correctAnswerDiv.style.display = 'block';
+            if (!allAnswered) {
+                alert('Por favor, responda todas as perguntas antes de enviar.');
+                return;
             }
-        } else {
-            // Se nenhuma resposta foi selecionada, exibe a resposta correta
-            correctAnswerDiv.style.display = 'block';
+
+            // Mostrar respostas corretas e aplicar cores de validação
+            questions.forEach(question => {
+                const correctAnswer = question.getAttribute('data-correct');
+                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        selectedOption.parentElement.classList.add('correct');
+                    } else {
+                        selectedOption.parentElement.classList.add('incorrect');
+                        question.querySelector('.correct-answer').style.display = 'block';
+                    }
+                } else {
+                    question.querySelector('.correct-answer').style.display = 'block';
+                }
+            });
+
+            // Desabilita todas as opções para impedir alterações após o envio
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.disabled = true;
+            });
+
+            document.querySelector('.results').style.display = 'block';
+            document.getElementById('correct-count').textContent = `Respostas corretas: ${correct}`;
+            document.getElementById('incorrect-count').textContent = `Respostas incorretas: ${incorrect}`;
         }
-    }
-
-    // Calcula a porcentagem de acertos
-    const percentage = (score / totalQuestions) * 100;
-
-    // Exibe os resultados
-    scoreElement.textContent = `Você acertou ${score} de ${totalQuestions} perguntas.`;
-    percentageElement.textContent = `Sua porcentagem de acerto é ${percentage.toFixed(2)}%.`;
-
-    // Mostra a seção de resultados
-    resultsContainer.style.display = 'block';
-}
     </script>
 </body>
 </html>
